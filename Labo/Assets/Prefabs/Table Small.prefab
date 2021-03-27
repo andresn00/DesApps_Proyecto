@@ -167,8 +167,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9189022657732876670}
+  - component: {fileID: 3589919691698838475}
   m_Layer: 0
-  m_Name: miniMesa
+  m_Name: Table Small
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,7 +182,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8416708491026056132}
-  m_LocalRotation: {x: -0, y: 0.422075, z: -0, w: 0.90656096}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0.089863405, y: 0.6457457, z: -2.7697067}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -189,4 +190,17 @@ Transform:
   - {fileID: 2319977344512073923}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 49.931004, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &3589919691698838475
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8416708491026056132}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.50878984, y: 0.85257477, z: 0.8157963}
+  m_Center: {x: 0.000000029802322, y: -0.22113803, z: -0.0020467043}

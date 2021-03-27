@@ -9,8 +9,8 @@ public class Player : MonoBehaviour
     
     //Config
     [Header("Configuration")]
-    float rotationAngle = -45f;
     bool isShooting = false;
+    [SerializeField] float rotationSpeed = 10f;
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] float fireRate = 1f;
     [SerializeField] float nextShot = 0f;
@@ -58,9 +58,11 @@ public class Player : MonoBehaviour
     {
         if (x != 0 && y != 0)
         {
-            rotationAngle = Mathf.Rad2Deg * Mathf.Atan2(y, x);
+            float rotationAngle = Mathf.Rad2Deg * Mathf.Atan2(y, x);
+            Quaternion rotation = Quaternion.AngleAxis(rotationAngle, Vector3.down);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
+            //transform.eulerAngles = Vector3.down * rotationAngle;
         }
-        transform.eulerAngles = Vector3.down * rotationAngle;
     }
 
     private void HandleShoot()
