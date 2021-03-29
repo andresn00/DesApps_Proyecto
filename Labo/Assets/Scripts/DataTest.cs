@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class DataTest : MonoBehaviour
 {
-    float puntosPorEnemigo = 1;
+    float puntosPorEnemigo = 10;
     [SerializeField] float tiempo = 5;
     [SerializeField] GameSession gameSession;
     float tiempoInicial;
