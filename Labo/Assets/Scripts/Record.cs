@@ -51,15 +51,15 @@ public class Record : MonoBehaviour
         float score = PlayerPrefs.GetFloat(highscoreKey);
          textoPuntaje.text = score.ToString();
         float time = PlayerPrefs.GetFloat(bestTimeKey);
-        textoPuntaje.text = time.ToString();
+        textoTiempo.text = time.ToString();
         float kills = PlayerPrefs.GetFloat(mostKillsKey);
-        textoPuntaje.text = kills.ToString();
+        textokills.text = kills.ToString();
         float totalScore = PlayerPrefs.GetFloat(totalScoreKey);
-        textoPuntaje.text = totalScore.ToString();
+        textoTotalScore.text = totalScore.ToString();
         float totalTime = PlayerPrefs.GetFloat(totalTimeKey);
-        textoPuntaje.text = totalTime.ToString();
+        textoTotalTime.text = totalTime.ToString();
         float totalKills = PlayerPrefs.GetFloat(totalKillsKey);
-        textoPuntaje.text = totalKills.ToString();
+        textoTotalKills.text = totalKills.ToString();
 
     }
     public void PuntajeAlAzar()
