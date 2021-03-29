@@ -43,4 +43,11 @@ public class GameSession : MonoBehaviour
         dataManager.SetBestTime(timeAlive);
         dataManager.SetMostKills(killCount);
     }
+    public void SaveDataTest(float score, float time, float kills)
+    {
+        dataManager.SetTotals(score, time, kills);
+        dataManager.SetHighscore(score);
+        dataManager.SetBestTime(time);
+        dataManager.SetMostKills(kills);
+    }
 }
