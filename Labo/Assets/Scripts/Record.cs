@@ -37,22 +37,10 @@ public class Record : MonoBehaviour
     {
         float score = PlayerPrefs.GetFloat(highscoreKey);
         float time = PlayerPrefs.GetFloat(bestTimeKey);
-<<<<<<< HEAD
-        textoTiempo.text = time.ToString();
-        float kills = PlayerPrefs.GetFloat(mostKillsKey);
-        textokills.text = kills.ToString();
-        float totalScore = PlayerPrefs.GetFloat(totalScoreKey);
-        textoTotalScore.text = totalScore.ToString();
-        float totalTime = PlayerPrefs.GetFloat(totalTimeKey);
-        textoTotalTime.text = totalTime.ToString();
-        float totalKills = PlayerPrefs.GetFloat(totalKillsKey);
-        textoTotalKills.text = totalKills.ToString();
-=======
         float kills = PlayerPrefs.GetFloat(mostKillsKey);
         float totalScore = PlayerPrefs.GetFloat(totalScoreKey);
         float totalTime = PlayerPrefs.GetFloat(totalTimeKey);
         float totalKills = PlayerPrefs.GetFloat(totalKillsKey);
->>>>>>> 03cec402cdfeebbe13ccd9c5c15f1722fef16953
 
         float[] dataArr = { score, time, kills, totalScore, totalTime, totalKills };
         return dataArr;
