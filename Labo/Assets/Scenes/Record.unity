@@ -226,9 +226,8 @@ GameObject:
   - component: {fileID: 178453471}
   - component: {fileID: 178453474}
   - component: {fileID: 178453473}
-  - component: {fileID: 178453472}
   m_Layer: 5
-  m_Name: Text (2)
+  m_Name: Best Time Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -253,30 +252,6 @@ RectTransform:
   m_AnchoredPosition: {x: 26, y: 20}
   m_SizeDelta: {x: 125.15057, y: 33.5027}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &178453472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 178453470}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3366780d98683a4b954784901f4229e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textoPuntaje: {fileID: 0}
-  numPuntaje: 0
-  textoTiempo: {fileID: 178453473}
-  numTiempo: 0
-  textokills: {fileID: 0}
-  numkills: 0
-  textoTotalScore: {fileID: 0}
-  numTotalScore: 0
-  textoTotalTime: {fileID: 0}
-  numTotalTime: 0
-  textoTotalKills: {fileID: 0}
-  numTotalKills: 0
 --- !u!114 &178453473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -445,7 +420,7 @@ GameObject:
   - component: {fileID: 413586935}
   - component: {fileID: 413586934}
   m_Layer: 5
-  m_Name: Text (4)
+  m_Name: TT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -463,7 +438,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1499508119}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -502,7 +477,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: totalTime
+  m_Text: 'Total Time:'
 --- !u!222 &413586935
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -523,7 +498,7 @@ GameObject:
   - component: {fileID: 413614827}
   - component: {fileID: 413614826}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: HS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -541,7 +516,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1499508119}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -580,7 +555,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'HighScore:'
+  m_Text: 'High Score:'
 --- !u!222 &413614827
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -671,7 +646,7 @@ GameObject:
   - component: {fileID: 544302338}
   - component: {fileID: 544302337}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Delete Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -690,7 +665,7 @@ RectTransform:
   m_Children:
   - {fileID: 1030713463}
   m_Father: {fileID: 1499508119}
-  m_RootOrder: 1
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -739,7 +714,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 544302338}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 681515345}
+        m_MethodName: DeleteRecords
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &544302338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -789,7 +775,7 @@ GameObject:
   - component: {fileID: 555881452}
   - component: {fileID: 555881451}
   m_Layer: 5
-  m_Name: Text (2)
+  m_Name: MK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -807,7 +793,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1499508119}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -846,7 +832,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: MostKills
+  m_Text: 'Most Kills:'
 --- !u!222 &555881452
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -867,7 +853,7 @@ GameObject:
   - component: {fileID: 562982817}
   - component: {fileID: 562982816}
   m_Layer: 5
-  m_Name: Text (3)
+  m_Name: TS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -885,7 +871,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1499508119}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -924,7 +910,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'totalScore:'
+  m_Text: 'Total Score:'
 --- !u!222 &562982817
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -945,7 +931,7 @@ GameObject:
   - component: {fileID: 678749124}
   - component: {fileID: 678749123}
   m_Layer: 5
-  m_Name: Text
+  m_Name: BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -963,7 +949,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1499508119}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1002,7 +988,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: BestTime
+  m_Text: 'Best Time:'
 --- !u!222 &678749124
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1023,6 +1009,7 @@ GameObject:
   - component: {fileID: 681515343}
   - component: {fileID: 681515342}
   - component: {fileID: 681515341}
+  - component: {fileID: 681515345}
   m_Layer: 5
   m_Name: Canvas_Menu
   m_TagString: Untagged
@@ -1062,7 +1049,7 @@ MonoBehaviour:
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1101,8 +1088,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1499508119}
   - {fileID: 1845244291}
+  - {fileID: 1499508119}
   - {fileID: 1699722083}
   - {fileID: 178453471}
   - {fileID: 1973021836}
@@ -1117,6 +1104,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &681515345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681515340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3366780d98683a4b954784901f4229e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recordsTexts:
+  - {fileID: 1699722085}
+  - {fileID: 178453473}
+  - {fileID: 1973021838}
+  - {fileID: 1395783738}
+  - {fileID: 1567623997}
+  - {fileID: 1042567477}
 --- !u!1 &926787904
 GameObject:
   m_ObjectHideFlags: 0
@@ -1304,9 +1310,8 @@ GameObject:
   - component: {fileID: 1042567475}
   - component: {fileID: 1042567478}
   - component: {fileID: 1042567477}
-  - component: {fileID: 1042567476}
   m_Layer: 5
-  m_Name: Text (6)
+  m_Name: Total Kills Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1331,30 +1336,6 @@ RectTransform:
   m_AnchoredPosition: {x: 26, y: -112}
   m_SizeDelta: {x: 125.15057, y: 33.5027}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1042567476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1042567474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3366780d98683a4b954784901f4229e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textoPuntaje: {fileID: 0}
-  numPuntaje: 0
-  textoTiempo: {fileID: 1042567477}
-  numTiempo: 0
-  textokills: {fileID: 0}
-  numkills: 0
-  textoTotalScore: {fileID: 0}
-  numTotalScore: 0
-  textoTotalTime: {fileID: 0}
-  numTotalTime: 0
-  textoTotalKills: {fileID: 0}
-  numTotalKills: 0
 --- !u!114 &1042567477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1609,9 +1590,8 @@ GameObject:
   - component: {fileID: 1395783736}
   - component: {fileID: 1395783739}
   - component: {fileID: 1395783738}
-  - component: {fileID: 1395783737}
   m_Layer: 5
-  m_Name: Text (4)
+  m_Name: Total Score Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1636,30 +1616,6 @@ RectTransform:
   m_AnchoredPosition: {x: 26, y: -45}
   m_SizeDelta: {x: 125.15057, y: 33.5027}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1395783737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1395783735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3366780d98683a4b954784901f4229e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textoPuntaje: {fileID: 0}
-  numPuntaje: 0
-  textoTiempo: {fileID: 1395783738}
-  numTiempo: 0
-  textokills: {fileID: 0}
-  numkills: 0
-  textoTotalScore: {fileID: 0}
-  numTotalScore: 0
-  textoTotalTime: {fileID: 0}
-  numTotalTime: 0
-  textoTotalKills: {fileID: 0}
-  numTotalKills: 0
 --- !u!114 &1395783738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1731,15 +1687,15 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 678749122}
-  - {fileID: 544302336}
   - {fileID: 413614825}
+  - {fileID: 678749122}
   - {fileID: 555881450}
   - {fileID: 562982815}
   - {fileID: 413586933}
   - {fileID: 1645707522}
+  - {fileID: 544302336}
   m_Father: {fileID: 681515344}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1795,18 +1751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3366780d98683a4b954784901f4229e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoPuntaje: {fileID: 1699722085}
-  numPuntaje: 15
-  textoTiempo: {fileID: 178453473}
-  numTiempo: 0
-  textokills: {fileID: 1973021838}
-  numkills: 0
-  textoTotalScore: {fileID: 1395783738}
-  numTotalScore: 0
-  textoTotalTime: {fileID: 1567623997}
-  numTotalTime: 0
-  textoTotalKills: {fileID: 1042567477}
-  numTotalKills: 0
+  recordsTexts: []
 --- !u!1 &1567623994
 GameObject:
   m_ObjectHideFlags: 0
@@ -1818,9 +1763,8 @@ GameObject:
   - component: {fileID: 1567623995}
   - component: {fileID: 1567623998}
   - component: {fileID: 1567623997}
-  - component: {fileID: 1567623996}
   m_Layer: 5
-  m_Name: Text (5)
+  m_Name: Total Time Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1845,30 +1789,6 @@ RectTransform:
   m_AnchoredPosition: {x: 26, y: -76}
   m_SizeDelta: {x: 125.15057, y: 33.5027}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1567623996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1567623994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3366780d98683a4b954784901f4229e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textoPuntaje: {fileID: 0}
-  numPuntaje: 0
-  textoTiempo: {fileID: 1567623997}
-  numTiempo: 0
-  textokills: {fileID: 0}
-  numkills: 0
-  textoTotalScore: {fileID: 0}
-  numTotalScore: 0
-  textoTotalTime: {fileID: 0}
-  numTotalTime: 0
-  textoTotalKills: {fileID: 0}
-  numTotalKills: 0
 --- !u!114 &1567623997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1922,7 +1842,7 @@ GameObject:
   - component: {fileID: 1645707524}
   - component: {fileID: 1645707523}
   m_Layer: 5
-  m_Name: Text (5)
+  m_Name: TK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1940,7 +1860,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1499508119}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1979,7 +1899,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'totalKills:'
+  m_Text: 'Total Kills:'
 --- !u!222 &1645707524
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2073,9 +1993,8 @@ GameObject:
   - component: {fileID: 1699722083}
   - component: {fileID: 1699722086}
   - component: {fileID: 1699722085}
-  - component: {fileID: 1699722084}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: Highscore Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2100,30 +2019,6 @@ RectTransform:
   m_AnchoredPosition: {x: 26, y: 62}
   m_SizeDelta: {x: 125.15057, y: 33.5027}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1699722084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1699722082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3366780d98683a4b954784901f4229e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textoPuntaje: {fileID: 1699722085}
-  numPuntaje: 0
-  textoTiempo: {fileID: 0}
-  numTiempo: 0
-  textokills: {fileID: 0}
-  numkills: 0
-  textoTotalScore: {fileID: 0}
-  numTotalScore: 0
-  textoTotalTime: {fileID: 0}
-  numTotalTime: 0
-  textoTotalKills: {fileID: 0}
-  numTotalKills: 0
 --- !u!114 &1699722085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2177,7 +2072,7 @@ GameObject:
   - component: {fileID: 1845244293}
   - component: {fileID: 1845244292}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2195,7 +2090,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 681515344}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2254,9 +2149,8 @@ GameObject:
   - component: {fileID: 1973021836}
   - component: {fileID: 1973021839}
   - component: {fileID: 1973021838}
-  - component: {fileID: 1973021837}
   m_Layer: 5
-  m_Name: Text (3)
+  m_Name: Most Kills Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2281,30 +2175,6 @@ RectTransform:
   m_AnchoredPosition: {x: 26, y: -13}
   m_SizeDelta: {x: 125.15057, y: 33.5027}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1973021837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1973021835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3366780d98683a4b954784901f4229e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textoPuntaje: {fileID: 0}
-  numPuntaje: 0
-  textoTiempo: {fileID: 1973021838}
-  numTiempo: 0
-  textokills: {fileID: 0}
-  numkills: 0
-  textoTotalScore: {fileID: 0}
-  numTotalScore: 0
-  textoTotalTime: {fileID: 0}
-  numTotalTime: 0
-  textoTotalKills: {fileID: 0}
-  numTotalKills: 0
 --- !u!114 &1973021838
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,20 +6,10 @@ using UnityEngine.UI;
 
 public class Record : MonoBehaviour
 {
-    public Text textoPuntaje;
-    public int numPuntaje;
-    public Text textoTiempo;
-    public int numTiempo;
-    public Text textokills;
-    public int numkills;
-    public Text textoTotalScore;
-    public int numTotalScore;
-    public Text textoTotalTime;
-    public int numTotalTime;
-    public Text textoTotalKills;
-    public int numTotalKills;
+    [SerializeField] Text[] recordsTexts;
 
-
+    //KEYS
+    //Records
     string highscoreKey = "highscore";
     string bestTimeKey = "bestTime";
     string mostKillsKey = "mostKills";
@@ -31,40 +21,33 @@ public class Record : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetData();
-
-        numPuntaje = 0;
-        numTiempo =0;
-        numkills = 0;
-        numTotalScore = 0;
-        numTotalTime = 0;
-        numTotalKills = 0;
+        PrintRecords();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void PrintRecords()
     {
-        
+        float[] dataArr = GetRecords();
+        for (int i = 0; i < recordsTexts.Length; i++)
+        {
+            recordsTexts[i].text = dataArr[i].ToString();
+        }
     }
-    void GetData()
+
+    private float[] GetRecords()
     {
         float score = PlayerPrefs.GetFloat(highscoreKey);
-         textoPuntaje.text = score.ToString();
         float time = PlayerPrefs.GetFloat(bestTimeKey);
-        textoPuntaje.text = time.ToString();
         float kills = PlayerPrefs.GetFloat(mostKillsKey);
-        textoPuntaje.text = kills.ToString();
         float totalScore = PlayerPrefs.GetFloat(totalScoreKey);
-        textoPuntaje.text = totalScore.ToString();
         float totalTime = PlayerPrefs.GetFloat(totalTimeKey);
-        textoPuntaje.text = totalTime.ToString();
         float totalKills = PlayerPrefs.GetFloat(totalKillsKey);
-        textoPuntaje.text = totalKills.ToString();
 
+        float[] dataArr = { score, time, kills, totalScore, totalTime, totalKills };
+        return dataArr;
     }
-    public void PuntajeAlAzar()
+
+    public void DeleteRecords()
     {
-        numPuntaje = Random.Range(0, 1000);
-        textoPuntaje.text = numPuntaje.ToString();
+        PlayerPrefs.DeleteAll();
     }
 }
