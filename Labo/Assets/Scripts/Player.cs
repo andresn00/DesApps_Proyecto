@@ -6,10 +6,12 @@ public class Player : MonoBehaviour
 {
     //Components
     Rigidbody rb;
+    Animator animator;
     
     //Config
     [Header("Configuration")]
     bool isShooting = false;
+    bool isMoving = false;
     [SerializeField] float rotationSpeed = 10f;
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] float fireRate = 1f;
@@ -31,6 +33,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -43,10 +46,22 @@ public class Player : MonoBehaviour
 
     private void Move()
     {
-        var deltaX = leftJoystick.Horizontal * Time.deltaTime * moveSpeed;
-        var deltaZ = leftJoystick.Vertical * Time.deltaTime * moveSpeed;
+        if (leftJoystick.Horizontal != 0 && leftJoystick.Vertical != 0)
+        {
+            var deltaX = leftJoystick.Horizontal * Time.deltaTime * moveSpeed;
+            var deltaZ = leftJoystick.Vertical * Time.deltaTime * moveSpeed;
 
-        transform.position = new Vector3(transform.position.x + deltaX, transform.position.y, transform.position.z + deltaZ);
+            transform.position = new Vector3(transform.position.x + deltaX, transform.position.y, transform.position.z + deltaZ);
+            isMoving = true;
+            animator.SetBool("isMoving", isMoving);
+            animator.speed = leftJoystick.Direction.magnitude;
+        }
+        else
+        {
+            isMoving = false;
+            animator.SetBool("isMoving", isMoving);
+            animator.speed = 1;
+        }
 
         if (!isShooting)
         {

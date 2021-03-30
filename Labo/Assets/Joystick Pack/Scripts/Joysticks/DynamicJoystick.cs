@@ -9,23 +9,28 @@ public class DynamicJoystick : Joystick
 
     [SerializeField] private float moveThreshold = 1;
 
+    //Added vars
+    Vector2 backgroundPos;
+
     protected override void Start()
     {
         MoveThreshold = moveThreshold;
         base.Start();
-        background.gameObject.SetActive(false);
+        //background.gameObject.SetActive(false);
+        backgroundPos = background.anchoredPosition;
     }
 
     public override void OnPointerDown(PointerEventData eventData)
     {
         background.anchoredPosition = ScreenPointToAnchoredPosition(eventData.position);
-        background.gameObject.SetActive(true);
+        //background.gameObject.SetActive(true);
         base.OnPointerDown(eventData);
     }
 
     public override void OnPointerUp(PointerEventData eventData)
     {
-        background.gameObject.SetActive(false);
+        //background.gameObject.SetActive(false);
+        background.anchoredPosition = backgroundPos;
         base.OnPointerUp(eventData);
     }
 
