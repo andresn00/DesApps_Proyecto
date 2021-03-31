@@ -49,5 +49,6 @@ public class Record : MonoBehaviour
     public void DeleteRecords()
     {
         PlayerPrefs.DeleteAll();
+        PrintRecords();
     }
 }
