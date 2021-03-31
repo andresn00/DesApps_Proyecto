@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class DataTest : MonoBehaviour
 {
-    float puntosPorEnemigo = 10;
+    [SerializeField] float puntosPorEnemigo = 10;
     [SerializeField] float tiempo = 5;
-    [SerializeField] float maxScore = 100;
+    [SerializeField] float maxKilledEnemies = 100;
     [SerializeField] GameSession gameSession;
     float tiempoInicial;
     
@@ -29,7 +29,7 @@ public class DataTest : MonoBehaviour
     }
     void numeroAl()
     {
-        float enemigosMuertos = Mathf.Floor(Random.Range(1, maxScore));
+        float enemigosMuertos = Mathf.Floor(Random.Range(1, maxKilledEnemies));
         float puntaje = enemigosMuertos * puntosPorEnemigo;
         gameSession.SaveDataTest(puntaje, tiempo, enemigosMuertos);
         Debug.Log(puntaje+" " + tiempo+" "+ enemigosMuertos+" ");
