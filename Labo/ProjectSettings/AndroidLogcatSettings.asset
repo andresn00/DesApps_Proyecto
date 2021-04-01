@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "ce011821519c64c20d",
     "m_SelectedPackage": {
-        "deviceId": "ce011821519c64c20d",
-        "name": "com.DefaultCompany.Labo",
-        "processId": 5990,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -24,12 +24,24 @@
             "deviceId": "ce011821519c64c20d",
             "name": "com.DefaultCompany.Labo",
             "processId": 2539,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "ce011821519c64c20d",
             "name": "com.DefaultCompany.Labo",
             "processId": 5990,
+            "exited": true
+        },
+        {
+            "deviceId": "ce011821519c64c20d",
+            "name": "com.DefaultCompany.Labo",
+            "processId": 10036,
+            "exited": true
+        },
+        {
+            "deviceId": "ce011821519c64c20d",
+            "name": "com.DefaultCompany.Labo",
+            "processId": 16555,
             "exited": false
         }
     ],
