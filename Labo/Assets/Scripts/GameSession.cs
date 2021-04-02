@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameSession : MonoBehaviour
 {
     //State
-    float currentScore = 0;
-    float killCount = 0;
+    [SerializeField] float currentScore = 0;
+    [SerializeField] float killCount = 0;
     float initialTime;
 
     //Components
@@ -19,12 +20,6 @@ public class GameSession : MonoBehaviour
         initialTime = Time.time;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void AddToScore(float score)
     {
         currentScore += score;
@@ -35,7 +30,13 @@ public class GameSession : MonoBehaviour
         killCount++;
     }
 
-    public void SaveData()
+    public void GameOver()
+    {
+        SaveData();
+        SceneManager.LoadScene("Record1");
+    }
+
+    private void SaveData()
     {
         float timeAlive = Time.time - initialTime;
         dataManager.SetTotals(currentScore, timeAlive, killCount);

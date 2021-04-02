@@ -29,12 +29,14 @@ public class Player : MonoBehaviour
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] GameObject firingPoint;
     [SerializeField] GameObject bullet;
+    GameSession gameSession;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+        gameSession = FindObjectOfType<GameSession>();
     }
 
     // Update is called once per frame
@@ -121,6 +123,7 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
+        gameSession.GameOver();
         Destroy(gameObject);
     }
 }

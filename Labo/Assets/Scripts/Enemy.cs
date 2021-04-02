@@ -5,11 +5,13 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] float health = 100f;
+    [SerializeField] float scoreOfEnemy = 10;
+    GameSession gameSession;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameSession = FindObjectOfType<GameSession>();
     }
 
     // Update is called once per frame
@@ -44,6 +46,8 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
+        gameSession.AddKillCount();
+        gameSession.AddToScore(scoreOfEnemy);
         Destroy(gameObject);
     }
 
