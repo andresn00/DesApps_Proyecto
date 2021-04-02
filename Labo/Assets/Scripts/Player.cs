@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
 
     //Config
     [Header("Configuration")]
-    [SerializeField] float health = 100f;
+    [SerializeField] int lives = 3;
     bool isShooting = false;
     bool isMoving = false;
     [SerializeField] float rotationSpeed = 10f;
@@ -113,9 +113,8 @@ public class Player : MonoBehaviour
 
     private void TakeDamage(Collider collision)
     {
-        DamageDealer damageDealer = collision.GetComponent<DamageDealer>();
-        health -= damageDealer.GetDamage();
-        if (health <= 0)
+        lives--;
+        if (lives <= 0)
         {
             Die();
         }
@@ -125,5 +124,10 @@ public class Player : MonoBehaviour
     {
         gameSession.GameOver();
         Destroy(gameObject);
+    }
+
+    public int GetLives()
+    {
+        return lives;
     }
 }

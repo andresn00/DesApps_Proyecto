@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameSession : MonoBehaviour
@@ -10,6 +11,11 @@ public class GameSession : MonoBehaviour
     [SerializeField] float killCount = 0;
     float initialTime;
 
+    //Cache
+    [SerializeField] Text scoreText;
+    [SerializeField] Text livesText;
+    Player player;
+
     //Components
     DataManager dataManager;
 
@@ -18,6 +24,19 @@ public class GameSession : MonoBehaviour
     {
         dataManager = GetComponent<DataManager>();
         initialTime = Time.time;
+
+        player = FindObjectOfType<Player>();
+    }
+
+    private void Update()
+    {
+        PrintValues();
+    }
+
+    private void PrintValues()
+    {
+        scoreText.text = currentScore.ToString();
+        livesText.text = player.GetLives().ToString();
     }
 
     public void AddToScore(float score)
