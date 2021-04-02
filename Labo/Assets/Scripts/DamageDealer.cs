@@ -4,23 +4,16 @@ using UnityEngine;
 
 public class DamageDealer : MonoBehaviour
 {
-    float timeToDestroy = 1;
-    float initialTime;
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] int damage = 10;
+
+    public int GetDamage()
     {
-        initialTime = Time.time;
+        return damage;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Hit()
     {
-        DestroyItself();
-    }
-
-    private void DestroyItself()
-    {
-        if (Time.time >= initialTime + timeToDestroy)
+        if (!gameObject.CompareTag("Enemy"))
         {
             Destroy(gameObject);
         }

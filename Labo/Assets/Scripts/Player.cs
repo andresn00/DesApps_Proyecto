@@ -7,9 +7,10 @@ public class Player : MonoBehaviour
     //Components
     Rigidbody rb;
     Animator animator;
-    
+
     //Config
     [Header("Configuration")]
+    [SerializeField] float health = 100f;
     bool isShooting = false;
     bool isMoving = false;
     [SerializeField] float rotationSpeed = 10f;
@@ -100,4 +101,26 @@ public class Player : MonoBehaviour
         projectile.GetComponent<Rigidbody>().velocity = newVelocity;
     }
 
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            TakeDamage(collision);
+        }
+    }
+
+    private void TakeDamage(Collider collision)
+    {
+        DamageDealer damageDealer = collision.GetComponent<DamageDealer>();
+        health -= damageDealer.GetDamage();
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
+    }
 }
