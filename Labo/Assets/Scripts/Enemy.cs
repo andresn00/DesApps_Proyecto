@@ -7,10 +7,14 @@ public class Enemy : MonoBehaviour
     [SerializeField] float health = 100f;
     [SerializeField] float scoreOfEnemy = 10;
     GameSession gameSession;
+    public Vector3 valoresEnemigo;
+    public int cantidadEnemigos;
+    public GameObject enemy2;
 
     // Start is called before the first frame update
     void Start()
     {
+        enemigoOleada();
         gameSession = FindObjectOfType<GameSession>();
     }
 
@@ -50,5 +54,13 @@ public class Enemy : MonoBehaviour
         gameSession.AddToScore(scoreOfEnemy);
         Destroy(gameObject);
     }
-
+    void enemigoOleada()
+    {
+        for (int i = 0; i < cantidadEnemigos; i++)
+        {
+            Vector3 enemigoPosition = new Vector3(Random.Range(-valoresEnemigo.x, valoresEnemigo.y), valoresEnemigo.y, valoresEnemigo.x);
+            Quaternion enemigoRotation = Quaternion.identity;
+            Instantiate(enemy2, enemigoPosition, enemigoRotation);
+        }
+    }
 }
