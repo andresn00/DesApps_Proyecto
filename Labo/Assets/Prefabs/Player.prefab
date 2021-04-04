@@ -319,7 +319,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.6276004, z: 1}
+  m_Size: {x: 0.5, y: 1.6276004, z: 0.5}
   m_Center: {x: 0, y: -0.31380022, z: 0}
 --- !u!54 &1659061752321827252
 Rigidbody:
@@ -357,6 +357,7 @@ MonoBehaviour:
   bulletSpeed: 7
   leftJoystick: {fileID: 0}
   rightJoystick: {fileID: 0}
+  shotSFX: {fileID: 8300000, guid: 1143716df6b15764eb76b92555b5961f, type: 3}
   muzzleFlash: {fileID: 7006829034581199706}
   firingPoint: {fileID: 359462468}
   bullet: {fileID: 2185929344312939109, guid: e5c0b7ff201bf4648802f2398d96db24, type: 3}
