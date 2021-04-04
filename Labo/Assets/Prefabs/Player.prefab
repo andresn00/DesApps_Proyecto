@@ -357,6 +357,7 @@ MonoBehaviour:
   bulletSpeed: 7
   leftJoystick: {fileID: 0}
   rightJoystick: {fileID: 0}
+  shotSFX: {fileID: 8300000, guid: 1143716df6b15764eb76b92555b5961f, type: 3}
   muzzleFlash: {fileID: 7006829034581199706}
   firingPoint: {fileID: 359462468}
   bullet: {fileID: 2185929344312939109, guid: e5c0b7ff201bf4648802f2398d96db24, type: 3}

@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     [SerializeField] Joystick leftJoystick;
     [SerializeField] Joystick rightJoystick;
     [Space]
+    [SerializeField] AudioClip shotSFX;
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] GameObject firingPoint;
     [SerializeField] GameObject bullet;
@@ -97,7 +98,7 @@ public class Player : MonoBehaviour
     private void Shoot()
     {
         muzzleFlash.Play();
-        //Instanciar bala
+        AudioSource.PlayClipAtPoint(shotSFX, transform.position);
         GameObject projectile = Instantiate(bullet, firingPoint.transform.position, firingPoint.transform.rotation);
         Vector3 newVelocity = projectile.gameObject.transform.TransformVector(Vector3.left) * bulletSpeed * Time.deltaTime;
         projectile.GetComponent<Rigidbody>().velocity = newVelocity;
