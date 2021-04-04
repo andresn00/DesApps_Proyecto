@@ -4,24 +4,37 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    //Config
     [SerializeField] float health = 100f;
     [SerializeField] float scoreOfEnemy = 10;
+    [SerializeField] float speed;
+
+    //Other
+    GameObject player;
     GameSession gameSession;
-    public Vector3 valoresEnemigo;
-    public int cantidadEnemigos;
-    public GameObject enemy2;
 
     // Start is called before the first frame update
     void Start()
     {
-        enemigoOleada();
+        player = GameObject.FindGameObjectWithTag("Player");
         gameSession = FindObjectOfType<GameSession>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Move();
+
+    }
+
+    private void Move()
+    {
+        if (player)
+        {
+            Vector3 target = player.transform.position;
+            float fixedSpeed = speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, target, fixedSpeed);
+        }
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -53,14 +66,5 @@ public class Enemy : MonoBehaviour
         gameSession.AddKillCount();
         gameSession.AddToScore(scoreOfEnemy);
         Destroy(gameObject);
-    }
-    void enemigoOleada()
-    {
-        for (int i = 0; i < cantidadEnemigos; i++)
-        {
-            Vector3 enemigoPosition = new Vector3(Random.Range(-valoresEnemigo.x, valoresEnemigo.y), valoresEnemigo.y, valoresEnemigo.x);
-            Quaternion enemigoRotation = Quaternion.identity;
-            Instantiate(enemy2, enemigoPosition, enemigoRotation);
-        }
     }
 }

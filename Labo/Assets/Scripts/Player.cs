@@ -103,15 +103,15 @@ public class Player : MonoBehaviour
         projectile.GetComponent<Rigidbody>().velocity = newVelocity;
     }
 
-    private void OnTriggerEnter(Collider collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            TakeDamage(collision);
+            TakeDamage();
         }
     }
 
-    private void TakeDamage(Collider collision)
+    private void TakeDamage()
     {
         lives--;
         if (lives <= 0)

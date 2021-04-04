@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -887,7 +887,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ab0415def51d5e4c838a6f8c77e8727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puntosPorEnemigo: 10
   tiempo: 5
+  maxKilledEnemies: 100
   gameSession: {fileID: 1491958554}
 --- !u!4 &1420688486
 Transform:
@@ -959,6 +961,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042c482bba4dbce40a2e917b52ace8b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentScore: 0
+  killCount: 0
+  scoreText: {fileID: 0}
+  livesText: {fileID: 0}
 --- !u!1 &1961710981
 GameObject:
   m_ObjectHideFlags: 0
