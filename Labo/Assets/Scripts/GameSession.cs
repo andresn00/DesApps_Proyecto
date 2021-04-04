@@ -52,7 +52,7 @@ public class GameSession : MonoBehaviour
     public void GameOver()
     {
         SaveData();
-        SceneManager.LoadScene("Record1");
+        SceneManager.LoadScene("MenuPrincipal");
     }
 
     private void SaveData()
