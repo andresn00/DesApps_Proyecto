@@ -20,11 +20,9 @@ public class Player : MonoBehaviour
     [SerializeField] float bulletSpeed = 10f;
 
     [Space]
-    public GameObject efecto;
     public ContactPoint contact;
     public Quaternion rot;
     public Vector3 pos;
-    public float TiempoDeVida;
 
     //Cache
     [Header("Cached References")]
@@ -35,6 +33,7 @@ public class Player : MonoBehaviour
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] GameObject firingPoint;
     [SerializeField] GameObject bullet;
+    [SerializeField] ParticleSystem hitVFX;
     GameSession gameSession;
 
     // Start is called before the first frame update
@@ -51,11 +50,6 @@ public class Player : MonoBehaviour
         Move();
         isShooting = rightJoystick.IsPointerDown;
         HandleShoot();
-        TiempoDeVida -=Time.deltaTime;
-        if(TiempoDeVida <=0)
-        {
-            Instantiate(efecto, new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z), transform.rotation);
-        }
     }
 
     private void Move()
@@ -121,13 +115,13 @@ public class Player : MonoBehaviour
             contact = collision.contacts[0];
             rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
             pos = contact.point;
-            Instantiate(efecto, pos, rot);
             TakeDamage();
         }
     }
 
     private void TakeDamage()
     {
+        hitVFX.Play();
         lives--;
         if (lives <= 0)
         {

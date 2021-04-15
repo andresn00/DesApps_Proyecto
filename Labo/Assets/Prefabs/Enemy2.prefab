@@ -33,6 +33,7 @@ Transform:
   m_Children:
   - {fileID: 7687688482722912282}
   - {fileID: 8142684400059548591}
+  - {fileID: 2692528593085324740}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -99,10 +100,7 @@ MonoBehaviour:
   health: 100
   scoreOfEnemy: 10
   speed: 1.5
-  efecto: {fileID: 102902972014872041, guid: aa25a1723319b8048933c544f29482c3, type: 3}
-  rot: {x: 0, y: 0, z: 0, w: 1}
-  pos: {x: 0, y: 0, z: 0}
-  TiempoDeVida: 100000
+  virusHitVFX: {fileID: 2692528593085324742}
 --- !u!1 &3552439825506692963
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,4 +429,95 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6314663385604190539, guid: 593254caf10cc4940af8527333cb1e2e,
     type: 3}
   m_PrefabInstance: {fileID: 2783946628488262372}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3885090462783832957
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 582313889940335217}
+    m_Modifications:
+    - target: {fileID: 1204525212265340601, guid: 888973b605e7da44fb21f51638e0a352,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.114344314
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204525212265340601, guid: 888973b605e7da44fb21f51638e0a352,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.19999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204525212265340601, guid: 888973b605e7da44fb21f51638e0a352,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.027077049
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204525212265340601, guid: 888973b605e7da44fb21f51638e0a352,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.6532815
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204525212265340601, guid: 888973b605e7da44fb21f51638e0a352,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.27059802
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204525212265340601, guid: 888973b605e7da44fb21f51638e0a352,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.27059802
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204525212265340601, guid: 888973b605e7da44fb21f51638e0a352,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6532815
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204525212265340601, guid: 888973b605e7da44fb21f51638e0a352,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204525212265340601, guid: 888973b605e7da44fb21f51638e0a352,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204525212265340601, guid: 888973b605e7da44fb21f51638e0a352,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204525212265340601, guid: 888973b605e7da44fb21f51638e0a352,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204525212265340602, guid: 888973b605e7da44fb21f51638e0a352,
+        type: 3}
+      propertyPath: m_Name
+      value: Virus HitVFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204525212265340603, guid: 888973b605e7da44fb21f51638e0a352,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204525212265340603, guid: 888973b605e7da44fb21f51638e0a352,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.05
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 888973b605e7da44fb21f51638e0a352, type: 3}
+--- !u!4 &2692528593085324740 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1204525212265340601, guid: 888973b605e7da44fb21f51638e0a352,
+    type: 3}
+  m_PrefabInstance: {fileID: 3885090462783832957}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &2692528593085324742 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1204525212265340603, guid: 888973b605e7da44fb21f51638e0a352,
+    type: 3}
+  m_PrefabInstance: {fileID: 3885090462783832957}
   m_PrefabAsset: {fileID: 0}
