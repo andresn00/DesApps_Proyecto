@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
     //Other
     GameObject player;
     GameSession gameSession;
-
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         Move();
-
+        
     }
 
     private void Move()
@@ -47,6 +47,7 @@ public class Enemy : MonoBehaviour
         if (collision.CompareTag("Projectile"))
         {
             TakeDamage(collision);
+            
         }
     }
 
@@ -60,6 +61,7 @@ public class Enemy : MonoBehaviour
             Die();
         }
     }
+    
 
     private void Die()
     {

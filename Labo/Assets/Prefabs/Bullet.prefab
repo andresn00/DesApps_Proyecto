@@ -125,6 +125,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70e3a481c5c8cd64aa29490c8b5230b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  efecto: {fileID: 102902972014872041, guid: aa25a1723319b8048933c544f29482c3, type: 3}
+  rot: {x: 0, y: 0, z: 0, w: 0}
+  pos: {x: 0, y: 0, z: 0}
+  TiempoDeVida: 10000
 --- !u!114 &-5597095505343730961
 MonoBehaviour:
   m_ObjectHideFlags: 0
