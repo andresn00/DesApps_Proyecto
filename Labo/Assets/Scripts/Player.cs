@@ -20,6 +20,11 @@ public class Player : MonoBehaviour
     [SerializeField] float bulletSpeed = 10f;
 
     [Space]
+    public GameObject efecto;
+    public ContactPoint contact;
+    public Quaternion rot;
+    public Vector3 pos;
+    public float TiempoDeVida;
 
     //Cache
     [Header("Cached References")]
@@ -46,6 +51,11 @@ public class Player : MonoBehaviour
         Move();
         isShooting = rightJoystick.IsPointerDown;
         HandleShoot();
+        TiempoDeVida -=Time.deltaTime;
+        if(TiempoDeVida <=0)
+        {
+            Instantiate(efecto, new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z), transform.rotation);
+        }
     }
 
     private void Move()
@@ -108,6 +118,10 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            contact = collision.contacts[0];
+            rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
+            pos = contact.point;
+            Instantiate(efecto, pos, rot);
             TakeDamage();
         }
     }
@@ -124,6 +138,7 @@ public class Player : MonoBehaviour
     private void Die()
     {
         gameSession.GameOver();
+
         Destroy(gameObject);
     }
 

@@ -355,6 +355,10 @@ MonoBehaviour:
   fireRate: 0.1
   nextShot: 0
   bulletSpeed: 7
+  efecto: {fileID: 8528372534682504872, guid: 02c10eda41308344182aab7111b1bfb4, type: 3}
+  rot: {x: 0, y: 0, z: 0, w: 0}
+  pos: {x: 0, y: 0, z: 0}
+  TiempoDeVida: 100000
   leftJoystick: {fileID: 0}
   rightJoystick: {fileID: 0}
   shotSFX: {fileID: 8300000, guid: 1143716df6b15764eb76b92555b5961f, type: 3}

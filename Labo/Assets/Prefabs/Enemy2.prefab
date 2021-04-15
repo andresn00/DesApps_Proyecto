@@ -99,6 +99,10 @@ MonoBehaviour:
   health: 100
   scoreOfEnemy: 10
   speed: 1.5
+  efecto: {fileID: 102902972014872041, guid: aa25a1723319b8048933c544f29482c3, type: 3}
+  rot: {x: 0, y: 0, z: 0, w: 1}
+  pos: {x: 0, y: 0, z: 0}
+  TiempoDeVida: 100000
 --- !u!1 &3552439825506692963
 GameObject:
   m_ObjectHideFlags: 0
