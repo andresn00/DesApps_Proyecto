@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour {
     }
 
     public void RecordButton() {
-        SceneManager.LoadScene("Record");
+        SceneManager.LoadScene("Record1");
     }
 
     public void QuitButton()
