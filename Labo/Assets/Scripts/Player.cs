@@ -34,6 +34,7 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject firingPoint;
     [SerializeField] GameObject bullet;
     [SerializeField] ParticleSystem hitVFX;
+    [SerializeField] AudioClip hitSFX;
     GameSession gameSession;
 
     // Start is called before the first frame update
@@ -122,6 +123,7 @@ public class Player : MonoBehaviour
     private void TakeDamage()
     {
         hitVFX.Play();
+        AudioSource.PlayClipAtPoint(hitSFX, transform.position);
         lives--;
         if (lives <= 0)
         {

@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
 
     //Cache
     [SerializeField] ParticleSystem virusHitVFX;
+    [SerializeField] AudioClip hitSFX;
 
     //Other
     GameObject player;
@@ -57,6 +58,7 @@ public class Enemy : MonoBehaviour
     private void TakeDamage(Collider collision)
     {
         virusHitVFX.Play();
+        AudioSource.PlayClipAtPoint(hitSFX, transform.position);
         DamageDealer damageDealer = collision.GetComponent<DamageDealer>();
         health -= damageDealer.GetDamage();
         damageDealer.Hit();

@@ -365,6 +365,7 @@ MonoBehaviour:
   firingPoint: {fileID: 359462468}
   bullet: {fileID: 2185929344312939109, guid: e5c0b7ff201bf4648802f2398d96db24, type: 3}
   hitVFX: {fileID: 4305017195521036456}
+  hitSFX: {fileID: 8300000, guid: 5f6406c9472970e4f9554a3858daae5e, type: 3}
 --- !u!95 &6627297406734677703
 Animator:
   serializedVersion: 3
