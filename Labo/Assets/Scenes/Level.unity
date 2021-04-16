@@ -1683,7 +1683,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 32416fc722f3a5d43bf90cc78f63e5dc, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3183,6 +3183,11 @@ PrefabInstance:
       propertyPath: rightJoystick
       value: 
       objectReference: {fileID: 635738273}
+    - target: {fileID: 1659061752321827253, guid: dcc9f0268b4aa08428944bda128a9d2e,
+        type: 3}
+      propertyPath: hitSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 733218bddb4e4c74d8f9e800a4a2794b, type: 3}
     - target: {fileID: 1760951665463522425, guid: dcc9f0268b4aa08428944bda128a9d2e,
         type: 3}
       propertyPath: m_LocalPosition.x
