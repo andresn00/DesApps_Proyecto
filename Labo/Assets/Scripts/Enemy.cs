@@ -9,6 +9,10 @@ public class Enemy : MonoBehaviour
     [SerializeField] float scoreOfEnemy = 10;
     [SerializeField] float speed;
 
+    //Cache
+    [SerializeField] ParticleSystem virusHitVFX;
+    [SerializeField] AudioClip hitSFX;
+
     //Other
     GameObject player;
     GameSession gameSession;
@@ -53,6 +57,8 @@ public class Enemy : MonoBehaviour
 
     private void TakeDamage(Collider collision)
     {
+        virusHitVFX.Play();
+        AudioSource.PlayClipAtPoint(hitSFX, transform.position);
         DamageDealer damageDealer = collision.GetComponent<DamageDealer>();
         health -= damageDealer.GetDamage();
         damageDealer.Hit();

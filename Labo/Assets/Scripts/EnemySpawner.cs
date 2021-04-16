@@ -29,7 +29,9 @@ public class EnemySpawner : MonoBehaviour
     {
         if (enemiesSpawned >= numberOfEnemies)
         {
-            return;
+            enemiesSpawned = 0;
+            nextSpawn += timeToSpawnEachEnemy;
+            
         }
         if (Time.time >= nextSpawn)
         {

@@ -297,7 +297,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 242943456465072331, guid: 22a1e098ddf98c84193de4b3b362bf4e,
     type: 3}
   enemyYOffset: 0.96
-  numberOfEnemies: 10
+  numberOfEnemies: 1
   timeToSpawnEachEnemy: 5
   spawnPerimeter: 20
 --- !u!4 &160625799
@@ -3183,17 +3183,6 @@ PrefabInstance:
       propertyPath: rightJoystick
       value: 
       objectReference: {fileID: 635738273}
-    - target: {fileID: 1659061752321827253, guid: dcc9f0268b4aa08428944bda128a9d2e,
-        type: 3}
-      propertyPath: efecto
-      value: 
-      objectReference: {fileID: 8528372534682504872, guid: 02c10eda41308344182aab7111b1bfb4,
-        type: 3}
-    - target: {fileID: 1659061752321827253, guid: dcc9f0268b4aa08428944bda128a9d2e,
-        type: 3}
-      propertyPath: TiempoDeVida
-      value: 10000
-      objectReference: {fileID: 0}
     - target: {fileID: 1760951665463522425, guid: dcc9f0268b4aa08428944bda128a9d2e,
         type: 3}
       propertyPath: m_LocalPosition.x
