@@ -41,7 +41,6 @@ public class Bullet : MonoBehaviour
     {
         if (Time.time >= initialTime + timeToDestroy)
         {
-            Instantiate(efecto, new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z), transform.rotation);
             Destroy(gameObject);
         }
     }

@@ -101,7 +101,7 @@ MonoBehaviour:
   scoreOfEnemy: 10
   speed: 1.5
   virusHitVFX: {fileID: 2692528593085324742}
-  hitSFX: {fileID: 8300000, guid: 5f6406c9472970e4f9554a3858daae5e, type: 3}
+  hitSFX: {fileID: 8300000, guid: 733218bddb4e4c74d8f9e800a4a2794b, type: 3}
 --- !u!1 &3552439825506692963
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,6 +507,11 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204525212265340603, guid: 888973b605e7da44fb21f51638e0a352,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 888973b605e7da44fb21f51638e0a352, type: 3}
