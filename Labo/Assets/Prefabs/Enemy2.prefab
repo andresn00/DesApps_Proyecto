@@ -83,7 +83,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 84
+  m_Constraints: 116
   m_CollisionDetection: 1
 --- !u!114 &181264585
 MonoBehaviour:
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   scoreOfEnemy: 10
-  speed: 1.5
+  speed: 2
   virusHitVFX: {fileID: 2692528593085324742}
   hitSFX: {fileID: 8300000, guid: 733218bddb4e4c74d8f9e800a4a2794b, type: 3}
 --- !u!1 &3552439825506692963

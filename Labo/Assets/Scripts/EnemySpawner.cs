@@ -30,6 +30,11 @@ public class EnemySpawner : MonoBehaviour
         if (enemiesSpawned >= numberOfEnemies)
         {
             enemiesSpawned = 0;
+            timeToSpawnEachEnemy -= 0.3f;
+            if (timeToSpawnEachEnemy <= 2)
+            {
+                timeToSpawnEachEnemy = 2f;
+            }
             nextSpawn += timeToSpawnEachEnemy;
             
         }
@@ -39,7 +44,7 @@ public class EnemySpawner : MonoBehaviour
             enemyPos.y = enemyYOffset;
             Instantiate(enemyPrefab, enemyPos, Quaternion.identity);
             enemiesSpawned++;
-            nextSpawn += timeToSpawnEachEnemy;
+            nextSpawn = Time.time + timeToSpawnEachEnemy;
         }
     }
 }

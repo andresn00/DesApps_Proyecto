@@ -24,18 +24,6 @@ public class Bullet : MonoBehaviour
     {
         DestroyItself();
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            contact = collision.contacts[0];
-            rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
-            pos = contact.point;
-            Instantiate(efecto, pos, rot);
-
-        }
-
-    }
 
     private void DestroyItself()
     {
