@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 5483043838743213433}
   - component: {fileID: 4044569902254058557}
   - component: {fileID: 961083053651754493}
+  - component: {fileID: 2075310489502442009}
   m_Layer: 0
   m_Name: TentacleFace
   m_TagString: Untagged
@@ -160,7 +161,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5f625fb5dbf0b0347ae103459f66a8e0, type: 2}
+  - {fileID: 2100000, guid: 1cee44316d91acf419faf2f16d096ae7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -181,6 +182,23 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &2075310489502442009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3552439825506692963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea86535792032e94a8e7d8b2e008b6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterial: {fileID: 2100000, guid: 1cee44316d91acf419faf2f16d096ae7, type: 2}
+  baseColor: {r: 0.007843138, g: 0.94509804, b: 0, a: 1}
+  emissionColor: {r: 1, g: 1, b: 1, a: 1}
+  intensity: 0
+  texture: {fileID: 0}
 --- !u!1 &5531630413254176527
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,6 +210,7 @@ GameObject:
   - component: {fileID: 7687688482722912282}
   - component: {fileID: 5817699989513684865}
   - component: {fileID: 5164710268217179524}
+  - component: {fileID: 5939955415116693581}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -241,7 +260,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5f625fb5dbf0b0347ae103459f66a8e0, type: 2}
+  - {fileID: 2100000, guid: 1cee44316d91acf419faf2f16d096ae7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -262,6 +281,23 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &5939955415116693581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5531630413254176527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea86535792032e94a8e7d8b2e008b6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterial: {fileID: 2100000, guid: 1cee44316d91acf419faf2f16d096ae7, type: 2}
+  baseColor: {r: 0.009556986, g: 0.9433962, b: 0, a: 1}
+  emissionColor: {r: 1, g: 1, b: 1, a: 1}
+  intensity: 0
+  texture: {fileID: 0}
 --- !u!1 &6603281010815119145
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,6 +309,7 @@ GameObject:
   - component: {fileID: 1887049690496396820}
   - component: {fileID: 5419164250487561700}
   - component: {fileID: 436963035471259064}
+  - component: {fileID: 1400453308491503647}
   m_Layer: 0
   m_Name: Tentacles
   m_TagString: Untagged
@@ -320,7 +357,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5f625fb5dbf0b0347ae103459f66a8e0, type: 2}
+  - {fileID: 2100000, guid: 1cee44316d91acf419faf2f16d096ae7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -341,6 +378,23 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1400453308491503647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6603281010815119145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea86535792032e94a8e7d8b2e008b6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterial: {fileID: 2100000, guid: 1cee44316d91acf419faf2f16d096ae7, type: 2}
+  baseColor: {r: 0.007843138, g: 0.94509804, b: 0, a: 1}
+  emissionColor: {r: 1, g: 1, b: 1, a: 1}
+  intensity: 0
+  texture: {fileID: 0}
 --- !u!1001 &2783946628488262372
 PrefabInstance:
   m_ObjectHideFlags: 0

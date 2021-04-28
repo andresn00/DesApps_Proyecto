@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 5448788289087225624}
   - component: {fileID: 4483001170806219736}
   - component: {fileID: 7633819638445298017}
+  - component: {fileID: 2598602199070876693}
   m_Layer: 0
   m_Name: Top
   m_TagString: Untagged
@@ -90,7 +91,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e387b47ed0da1894cb0b2f287b42ff34, type: 2}
+  - {fileID: 2100000, guid: 1cee44316d91acf419faf2f16d096ae7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -111,6 +112,25 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &2598602199070876693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818479778016828663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea86535792032e94a8e7d8b2e008b6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterial: {fileID: 2100000, guid: 1cee44316d91acf419faf2f16d096ae7, type: 2}
+  baseColor: {r: 0, g: 0, b: 0, a: 1}
+  emissionColor: {r: 1, g: 1, b: 1, a: 1}
+  intensity: 0
+  texture: {fileID: 0}
+  tilesX: 0
+  tilesY: 0
 --- !u!1 &3667383395725749772
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,6 +142,7 @@ GameObject:
   - component: {fileID: 8601343034096377268}
   - component: {fileID: 7611457158379948165}
   - component: {fileID: 2206219239268066395}
+  - component: {fileID: 697188054433645916}
   m_Layer: 0
   m_Name: Bottom
   m_TagString: Untagged
@@ -169,7 +190,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: badb6e70aa2b53a45a674c0b6722a33d, type: 2}
+  - {fileID: 2100000, guid: 1cee44316d91acf419faf2f16d096ae7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -190,6 +211,25 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &697188054433645916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3667383395725749772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea86535792032e94a8e7d8b2e008b6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterial: {fileID: 2100000, guid: 1cee44316d91acf419faf2f16d096ae7, type: 2}
+  baseColor: {r: 1, g: 1, b: 1, a: 1}
+  emissionColor: {r: 1, g: 1, b: 1, a: 1}
+  intensity: 0.66
+  texture: {fileID: 2800000, guid: 0493563a60d0bb842814f62168fda2de, type: 3}
+  tilesX: 3
+  tilesY: 3
 --- !u!1 &3772763999172608010
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,6 +290,7 @@ GameObject:
   - component: {fileID: 186464020536090769}
   - component: {fileID: 2717072872771046482}
   - component: {fileID: 931508472715347392}
+  - component: {fileID: 8172298891836492016}
   m_Layer: 0
   m_Name: Tubos
   m_TagString: Untagged
@@ -297,7 +338,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e387b47ed0da1894cb0b2f287b42ff34, type: 2}
+  - {fileID: 2100000, guid: 1cee44316d91acf419faf2f16d096ae7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -318,6 +359,25 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &8172298891836492016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4937120529287426390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea86535792032e94a8e7d8b2e008b6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterial: {fileID: 2100000, guid: 1cee44316d91acf419faf2f16d096ae7, type: 2}
+  baseColor: {r: 0, g: 0, b: 0, a: 1}
+  emissionColor: {r: 1, g: 1, b: 1, a: 1}
+  intensity: 0
+  texture: {fileID: 0}
+  tilesX: 0
+  tilesY: 0
 --- !u!1 &5774311411892265618
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,6 +389,7 @@ GameObject:
   - component: {fileID: 2090327415591429122}
   - component: {fileID: 6726489404053025456}
   - component: {fileID: 399799825816709714}
+  - component: {fileID: 4317233649580042927}
   m_Layer: 0
   m_Name: Agarraderas
   m_TagString: Untagged
@@ -376,7 +437,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e387b47ed0da1894cb0b2f287b42ff34, type: 2}
+  - {fileID: 2100000, guid: 1cee44316d91acf419faf2f16d096ae7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -397,6 +458,25 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &4317233649580042927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5774311411892265618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea86535792032e94a8e7d8b2e008b6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterial: {fileID: 2100000, guid: 1cee44316d91acf419faf2f16d096ae7, type: 2}
+  baseColor: {r: 0, g: 0, b: 0, a: 1}
+  emissionColor: {r: 1, g: 1, b: 1, a: 1}
+  intensity: 0
+  texture: {fileID: 0}
+  tilesX: 0
+  tilesY: 0
 --- !u!1 &8619968176112610858
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,6 +488,7 @@ GameObject:
   - component: {fileID: 3525209706187400535}
   - component: {fileID: 4389643520329879560}
   - component: {fileID: 377411776774634247}
+  - component: {fileID: 188560015564780859}
   m_Layer: 0
   m_Name: Mid
   m_TagString: Untagged
@@ -455,7 +536,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: badb6e70aa2b53a45a674c0b6722a33d, type: 2}
+  - {fileID: 2100000, guid: 1cee44316d91acf419faf2f16d096ae7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -476,6 +557,25 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &188560015564780859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8619968176112610858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea86535792032e94a8e7d8b2e008b6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterial: {fileID: 2100000, guid: 1cee44316d91acf419faf2f16d096ae7, type: 2}
+  baseColor: {r: 1, g: 1, b: 1, a: 1}
+  emissionColor: {r: 1, g: 1, b: 1, a: 1}
+  intensity: 0.66
+  texture: {fileID: 2800000, guid: 0493563a60d0bb842814f62168fda2de, type: 3}
+  tilesX: 3
+  tilesY: 3
 --- !u!1001 &8955683813877302591
 PrefabInstance:
   m_ObjectHideFlags: 0

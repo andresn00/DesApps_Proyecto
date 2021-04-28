@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6368508048320275334}
   - component: {fileID: 9188903575337064268}
   - component: {fileID: 6312493670064395258}
+  - component: {fileID: 5791291004067910708}
   m_Layer: 0
   m_Name: Box
   m_TagString: Untagged
@@ -60,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 69ac9a0c72536fa45baa3c4889567094, type: 2}
+  - {fileID: 2100000, guid: 1cee44316d91acf419faf2f16d096ae7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -94,6 +95,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.008594625, y: 0.008594622, z: 0.008594622}
   m_Center: {x: 0.000008046627, y: 0.000011613591, z: -0.000001757871}
+--- !u!114 &5791291004067910708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7243326889453418137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea86535792032e94a8e7d8b2e008b6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterial: {fileID: 2100000, guid: 1cee44316d91acf419faf2f16d096ae7, type: 2}
+  baseColor: {r: 1, g: 1, b: 1, a: 1}
+  emissionColor: {r: 1, g: 1, b: 1, a: 1}
+  intensity: 0
+  texture: {fileID: 2800000, guid: e8aca240c5f161540a484f28c71f83a6, type: 3}
+  tilesX: 3
+  tilesY: 3
 --- !u!1001 &958758518
 PrefabInstance:
   m_ObjectHideFlags: 0

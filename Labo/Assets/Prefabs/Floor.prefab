@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8675385049484878377}
   - component: {fileID: 8675385049484878376}
   - component: {fileID: 8675385049484878372}
+  - component: {fileID: 1517504120190275960}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -27,9 +28,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8675385049484878383}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6.1232824, y: 6.1232824, z: 6.1232824}
+  m_LocalScale: {x: 6.123283, y: 6.1232824, z: 6.123283}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -60,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 32a314634deb09c4395e8bf5ae435104, type: 2}
+  - {fileID: 2100000, guid: 1cee44316d91acf419faf2f16d096ae7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -108,3 +109,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.466943, y: 2.220446e-16, z: 10.000001}
   m_Center: {x: -0.07450371, y: 0, z: 0}
+--- !u!114 &1517504120190275960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8675385049484878383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea86535792032e94a8e7d8b2e008b6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterial: {fileID: 2100000, guid: 1cee44316d91acf419faf2f16d096ae7, type: 2}
+  baseColor: {r: 1, g: 1, b: 1, a: 1}
+  emissionColor: {r: 1, g: 1, b: 1, a: 1}
+  intensity: 0.5
+  texture: {fileID: 2800000, guid: 25674815fa4bb194899e708e11c6faed, type: 3}
+  tilesX: 8
+  tilesY: 8
